@@ -2,9 +2,9 @@ fun main() {
     val dayId = "01"
     val input = readInput("Day${dayId}")
     val ans = input
-        .parts { it -> it.sumOf { it.toLong() } }
+        .parts { it.map { it.toLong() }.sum() }
         .sortedDescending()
-        .take(3)
+        .take(5)
         .sum()
     println(ans)
 }
